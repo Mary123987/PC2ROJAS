@@ -5,11 +5,13 @@ using PC2ROJAS.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.SQLLITE
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+   // options.UseSqlite(connectionString));
+
+var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
-
-
+    options.UseNpgsql(connectionString));   
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
