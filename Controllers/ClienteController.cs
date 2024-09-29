@@ -47,6 +47,14 @@ namespace PC2ROJAS.Controllers
             return View("IndexCliente");
         }
 
+        [HttpGet("Lista")]
+        public IActionResult Lista()
+        {
+            var clientes = _context.DataCliente.ToList();
+    
+            return View(clientes);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
