@@ -9,4 +9,6 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+     public DbSet<PC2ROJAS.Models.Cliente> DataCliente { get; set; }
 }
