@@ -2,7 +2,163 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Estilos de la barra de navegación */
+        nav {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .menu li {
+            margin-left: 20px;
+        }
+
+        nav .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav .menu li a:hover {
+            color: #b2dfdb;
+        }
+
+       
+       
+        header h1 {
+            font-size: 48px;
+            z-index: 1;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            background-color: #b2dfdb;
+            color: #00796b;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            z-index: 1;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #80cbc4;
+        }
+
+        /* Estilos de la sección de servicios */
+        .services {
+            padding: 50px 30px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            color: #00796b;
+            margin-bottom: 40px;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: #00796b;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+<!-- Sección de servicios -->
+<section class="services">
+    <h1>BIENVENIDOS A MI APLICATIVO MIBANCO</h1>
+    <h2>Nuestros Servicios</h2>
+    <div class="service-cards">
+        <div class="service-card">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Cuentas de Ahorro</h3>
+            <p>Obtén la mejor tasa de interés en el mercado y haz crecer tus ahorros.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Inversiones</h3>
+            <p>Invierte de manera segura y rentabiliza tu dinero con nuestros expertos.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>App Móvil</h3>
+            <p>Gestiona tus cuentas desde cualquier lugar con nuestra app intuitiva.</p>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
